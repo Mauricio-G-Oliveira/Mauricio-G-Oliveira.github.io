@@ -47,7 +47,6 @@ function setupEmailCopy() {
         await navigator.clipboard.writeText(userEmail);
         showToast('E-mail copiado para a área de transferência! 📋');
       } catch (err) {
-        // Fallback for older browsers
         const tempInput = document.createElement('input');
         tempInput.value = userEmail;
         document.body.appendChild(tempInput);
@@ -95,86 +94,86 @@ function setupMobileMenu() {
    ========================================================================== */
 const projectsData = [
   {
+    id: 'stageflow-backend',
+    title: 'StageFlow Back-End API REST',
+    category: 'backend',
+    subtitle: 'Arquitetura Java 21, Spring Boot 3 & PostgreSQL',
+    company: 'Mauricio-G-Oliveira / GitHub Open Source',
+    description: 'API RESTful completa construída para a plataforma StageFlow, fornecendo autenticação segura com JWT, gerenciamento de permissões, persistência relacional com JPA/Hibernate no PostgreSQL e endpoints documentados.',
+    architecture: 'Arquitetura limpa em camadas (Controller, Service, Repository, DTOs). Modelagem relacional robusta, tratamento global de exceções, migrations versionadas e esteira conteinerizada com Docker.',
+    impact: 'Alta performance com tempo de resposta sub-100ms em operações de consulta e suporte a escalabilidade horizontal.',
+    tags: ['Java 21', 'Spring Boot 3', 'Spring Security', 'JWT', 'PostgreSQL', 'Docker', 'Maven'],
+    githubUrl: 'https://github.com/Mauricio-G-Oliveira/stageflow-backend',
+    badge: 'GitHub Open Source',
+    isEnterprise: false
+  },
+  {
     id: 'conciliacao-contabil',
     title: 'Sistema de Conciliação Contábil & Auditoria',
-    category: 'backend',
+    category: 'enterprise',
     subtitle: 'Solução Corporativa de Missão Crítica',
     company: 'Orprocon / Net Data Computadores',
     description: 'Sistema corporativo voltado para a automação e auditoria contábil. Responsável pela validação em lote de registros financeiros, reduzindo o tempo de conferência manual de horas para poucos minutos.',
-    architecture: 'Arquitetura limpa em camadas (Controller, Service, Repository) com isolamento de regras fiscais complexas, transações ACID rigorosas no PostgreSQL e logs de auditoria detalhados.',
-    impact: 'Redução de 85% no tempo de conferência contábil mensal e mitigação total de erros de digitação e duplicidade.',
-    tags: ['Java 21', 'Spring Boot 3', 'PostgreSQL', 'Docker', 'Clean Architecture', 'JPA/Hibernate'],
+    architecture: 'Arquitetura limpa em camadas isolando regras fiscais complexas, transações ACID rigorosas no PostgreSQL, geração de relatórios sintéticos e logs de auditoria detalhados.',
+    impact: 'Redução de 85% no tempo de conferência contábil mensal e mitigação total de erros humanos de digitação e duplicidade.',
+    tags: ['Java', 'Spring Boot', 'PostgreSQL', 'Docker', 'Clean Architecture', 'JPA/Hibernate'],
     githubUrl: null,
     badge: 'Enterprise / Em Produção',
     isEnterprise: true
   },
   {
-    id: 'rag-vector-search',
-    title: 'RAG & Vector Search Engine (pgVector)',
-    category: 'ai',
-    subtitle: 'Busca Semântica e Ingestão de Documentos',
-    company: 'DevFullCycle MBA IA & Open Source',
-    description: 'Pipeline escalável de inteligência artificial generativa que ingere relatórios e manuais em PDF, divide em chunks semânticos, gera embeddings vetoriais de alta dimensionalidade e armazena em PostgreSQL com extensão pgVector.',
-    architecture: 'Mecanismo RAG (Retrieval-Augmented Generation) com cálculo de similaridade de cosseno direto no banco relacional, garantindo respostas estritamente embasadas nos dados originais sem alucinações.',
-    impact: 'Recuperação semântica instantânea em milissegundos com alta acurácia contextual para bases documentais volumosas.',
-    tags: ['Python', 'PostgreSQL', 'pgVector', 'OpenAI Embeddings', 'RAG', 'Docker'],
-    githubUrl: 'https://github.com/mauriciogoulart/mba-ia-desafio-ingestao-busca',
+    id: 'stageflow-frontend',
+    title: 'StageFlow Front-End Application',
+    category: 'fullstack',
+    subtitle: 'Gestão de Eventos, Músicos e Repertório',
+    company: 'Mauricio-G-Oliveira / GitHub Open Source',
+    description: 'Interface de usuário dinâmica e de alta performance desenvolvida em React, TypeScript e Vite. Fornece controle em tempo real de escalas, gerenciamento de repertório musical e contratos para eventos.',
+    architecture: 'Componentização modular com TypeScript tipado estritamente, consumo reativo da API REST via Axios, gerenciamento de estado previsível e interface responsiva com Tailwind CSS.',
+    impact: 'Experiência fluida e instantânea com carregamento em menos de 1 segundo através de bundling otimizado com Vite.',
+    tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Axios', 'REST API'],
+    githubUrl: 'https://github.com/Mauricio-G-Oliveira/stageflow',
     badge: 'GitHub Open Source',
     isEnterprise: false
   },
   {
     id: 'gestao-pessoas-rbac',
     title: 'Sistema de Gestão de Pessoas & RBAC',
-    category: 'fullstack',
+    category: 'enterprise',
     subtitle: 'Controle de Acesso Granular & Compliance',
     company: 'Orprocon / Net Data Computadores',
-    description: 'Plataforma integrada de gestão de colaboradores com controle de acesso baseado em papéis (Role-Based Access Control), gerenciamento de permissões dinâmicas e relatórios analíticos.',
-    architecture: 'Back-end em Spring Boot provendo API REST segura com JWT e Spring Security. Front-end reativo em React com componentes modulares e validações estritas de sessão.',
-    impact: 'Padronização da segurança operacional de múltiplos setores internos e conformidade com requisitos de LGPD e segurança da informação.',
+    description: 'Plataforma integrada de gestão corporativa de colaboradores com controle de acesso baseado em papéis (Role-Based Access Control), gerenciamento de permissões dinâmicas e emissão de relatórios analíticos.',
+    architecture: 'Back-end em Spring Boot provendo API REST segura com JWT e Spring Security. Front-end reativo com componentes modulares e validações estritas de sessão.',
+    impact: 'Padronização da segurança operacional de múltiplos setores internos e conformidade com requisitos de segurança e compliance de dados.',
     tags: ['Java', 'Spring Boot', 'Spring Security', 'JWT', 'React', 'PostgreSQL'],
     githubUrl: null,
     badge: 'Enterprise / Em Produção',
     isEnterprise: true
   },
   {
-    id: 'llm-evaluation-prompt',
-    title: 'LLM Pull Evaluation & Prompt Framework',
-    category: 'ai',
-    subtitle: 'Governança & Benchmarking de Modelos de Linguagem',
-    company: 'DevFullCycle MBA IA',
-    description: 'Framework de engenharia de prompts e avaliação automatizada de respostas de modelos de linguagem para validação de fluxos analíticos complexos.',
-    architecture: 'Arquitetura modular orientada a testes automatizados de consistência, grading semântico e orquestração de parâmetros (temperature, top_p, structured schema).',
-    impact: 'Auditoria e garantia de confiabilidade de modelos de linguagem antes de integrações em ambientes produtivos.',
-    tags: ['Python', 'LLM Orchestration', 'Prompt Engineering', 'AI Evaluation', 'Docker'],
-    githubUrl: 'https://github.com/mauriciogoulart/mba-ia-pull-evaluation-prompt',
-    badge: 'GitHub Open Source',
+    id: 'makerpixel-suite',
+    title: 'MakerPixel TechSystem — Plataforma Oficial',
+    category: 'fullstack',
+    subtitle: 'Soluções Corporativas em Sites & Sistemas Web',
+    company: 'MakerPixel TechSystem',
+    description: 'Desenvolvimento e arquitetura da plataforma institucional e módulos de serviços da MakerPixel TechSystem, integrando design moderno, alta taxa de conversão e painel administrativo integrado.',
+    architecture: 'Design responsivo, boas práticas de SEO, estrutura modular de componentes e integração com serviços analíticos.',
+    impact: 'Consolidação da presença digital da software house e sustentação técnica contínua com 99.9% de disponibilidade.',
+    tags: ['React', 'TypeScript', 'Tailwind CSS', 'UI/UX', 'SEO', 'Web Performance'],
+    githubUrl: 'https://github.com/Mauricio-G-Oliveira/makerpixelsite',
+    badge: 'Produção / GitHub',
     isEnterprise: false
   },
   {
-    id: 'makerpixel-web-suite',
-    title: 'Ecossistema Web Integrado & Geolocalização',
+    id: 'banda-livert-portal',
+    title: 'Portal Oficial & Mídia Banda Livert',
     category: 'fullstack',
-    subtitle: 'Aplicações Web Responsivas de Alto Throughput',
-    company: 'MakerPixel TechSystem',
-    description: 'Desenvolvimento e manutenção de suíte de aplicações web integrando interfaces de usuário dinâmicas com APIs back-end resilientes e microsserviços geolocalizados.',
-    architecture: 'Comunicação assíncrona entre serviços, autenticação centralizada JWT, modelagem relacional de alta performance e pipelines conteinerizadas com Docker.',
-    impact: 'Redução significativa em chamadas redundantes e elevação comprovada na estabilidade de entregas contínuas em ciclos Scrum.',
-    tags: ['React', 'Spring Boot', 'Docker', 'PostgreSQL', 'APIs REST', 'Scrum/Kanban'],
-    githubUrl: null,
-    badge: 'Enterprise Milestone',
-    isEnterprise: true
-  },
-  {
-    id: 'cloud-serverless-security',
-    title: 'Serverless Cloud Architecture & Cognito',
-    category: 'backend',
-    subtitle: 'Microsserviços sem Servidor & Identidade Federada AWS',
-    company: 'Digital Innovation One & AWS Labs',
-    description: 'Implementação de arquitetura baseada em funções serverless e segurança em nuvem utilizando AWS Lambda, API Gateway e Amazon Cognito para autenticação e gestão de identidade de usuários.',
-    architecture: 'Abordagem orientada a eventos (*event-driven*), escalabilidade elástica automática com custo zero em repouso e políticas IAM com privilégio mínimo.',
-    impact: 'Arquitetura de microsserviços capaz de lidar com picos de tráfego instantâneos mantendo baixíssima latência e conformidade com padrões AWS.',
-    tags: ['AWS Lambda', 'Amazon Cognito', 'JavaScript', 'Serverless', 'API Gateway', 'Cloud Security'],
-    githubUrl: 'https://github.com/mauriciogoulart/dio-desafio-cognito',
+    subtitle: 'Rock, Pop & Flashback (Tubarão/SC)',
+    company: 'Mauricio-G-Oliveira / GitHub Open Source',
+    description: 'Portal oficial da banda com agenda de shows, integração de mídias de alta fidelidade de áudio e vídeo, galeria responsiva e canal direto de contratação para eventos.',
+    architecture: 'Desenvolvimento focado em experiência mobile-first, carregamento assíncrono de mídia pesada e performance extrema de renderização.',
+    impact: 'Mais de 100% de aumento no engajamento de público e facilidade na conversão de novos contratos para eventos na região sul de SC.',
+    tags: ['JavaScript', 'HTML5/CSS3', 'Mobile First', 'Multimídia', 'Performance'],
+    githubUrl: 'https://github.com/Mauricio-G-Oliveira/banda-livert',
     badge: 'GitHub Open Source',
     isEnterprise: false
   }
@@ -336,14 +335,15 @@ function setupTerminal() {
 <span class="text-emerald-400"># Engenheiro de Software Full Stack & Especialista Back-End</span>
 <span class="text-slate-400">developer</span> = {
   <span class="text-sky-300">"name"</span>: <span class="text-amber-300">"Mauricio Goulart de Oliveira"</span>,
+  <span class="text-sky-300">"github"</span>: <span class="text-indigo-300">"Mauricio-G-Oliveira"</span>,
   <span class="text-sky-300">"location"</span>: <span class="text-amber-300">"Tubarão, SC - Brasil"</span>,
   <span class="text-sky-300">"status"</span>: <span class="text-emerald-300">"Disponível para novos desafios / Tech Lead / Sênior"</span>,
   <span class="text-sky-300">"specialties"</span>: [
-    <span class="text-amber-300">"Arquitetura de Microsserviços & APIs REST"</span>,
-    <span class="text-amber-300">"Ecossistema Java 17/21 & Spring Boot 3"</span>,
-    <span class="text-amber-300">"RAG, Busca Vetorial & PostgreSQL pgVector"</span>,
-    <span class="text-amber-300">"Modelagem Relacional de Alta Concorrência"</span>,
-    <span class="text-amber-300">"Front-End Moderno com React & Tailwind"</span>
+    <span class="text-amber-300">"Java 21 & Spring Boot 3 (Security, JPA, REST)"</span>,
+    <span class="text-amber-300">"PostgreSQL & Modelagem Relacional de Alta Concorrência"</span>,
+    <span class="text-amber-300">"Front-End Moderno com React & TypeScript"</span>,
+    <span class="text-amber-300">"Docker & Conteinerização de Aplicações"</span>,
+    <span class="text-amber-300">"Automações Contábeis & Sistemas Corporativos"</span>
   ],
   <span class="text-sky-300">"core_principles"</span>: [<span class="text-cyan-300">"SOLID"</span>, <span class="text-cyan-300">"Clean Architecture"</span>, <span class="text-cyan-300">"Fail-Fast"</span>, <span class="text-cyan-300">"Observability"</span>]
 };
@@ -354,7 +354,7 @@ function setupTerminal() {
 <span class="text-purple-400">❯</span> Executando auditoria de impacto em produção...
   <span class="text-sky-400">● Conciliação Contábil:</span> Tempo reduzido de 4h diárias para ~3 minutos.
   <span class="text-sky-400">● Precisão & Governança:</span> 0 inconsistências contábeis em lotes auditados.
-  <span class="text-sky-400">● Busca Semântica RAG:</span> Latência p95 &lt; 180ms em base vetorial pgVector.
+  <span class="text-sky-400">● StageFlow API:</span> Latência p95 &lt; 90ms em endpoints Spring Boot 3 + PostgreSQL.
   <span class="text-sky-400">● CI/CD & Deploy:</span> Esteiras conteinerizadas com Docker & zero-downtime.
     `.trim(),
 
@@ -363,7 +363,7 @@ function setupTerminal() {
 <span class="text-slate-400">canal_preferencial</span> = <span class="text-emerald-400">"WhatsApp (48) 98457-0272"</span>;
 <span class="text-slate-400">email_corporativo</span> = <span class="text-sky-400">"mauriciogoulart.deoliveira37@gmail.com"</span>;
 <span class="text-slate-400">linkedin</span> = <span class="text-indigo-400">"https://linkedin.com/in/mauriciogoulartdev"</span>;
-<span class="text-slate-400">github</span> = <span class="text-purple-400">"https://github.com/mauriciogoulart"</span>;
+<span class="text-slate-400">github</span> = <span class="text-purple-400">"https://github.com/Mauricio-G-Oliveira"</span>;
 
 <span class="text-emerald-400">Pronto para acelerar a entrega e robustez técnica do seu time.</span>
     `.trim()
