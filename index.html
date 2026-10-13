@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mauricio Oliveira | Engenheiro de Software Full Stack & Especialista Back-End Java</title>
+  <meta name="description" content="Portfólio profissional de Mauricio Oliveira: Desenvolvedor Back-End Java, Spring Boot, PostgreSQL, React, Microsserviços e Soluções com IA / pgVector.">
+  <meta name="keywords" content="Mauricio Oliveira, Desenvolvedor Java, Spring Boot, Full Stack, PostgreSQL, pgVector, React, Docker, Tubarão SC, RAG, Engenharia de Software">
+  <meta name="author" content="Mauricio Goulart de Oliveira">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mauricio Oliveira | Engenheiro de Software Full Stack & Java Specialist">
+  <meta property="og:description" content="Engenharia de software com foco em Java/Spring Boot, arquitetura resiliente, microsserviços, PostgreSQL e integrações com IA.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/49347578?v=4">
+  <meta property="og:url" content="https://mauriciogoulart.github.io/">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mauricio Oliveira | Engenheiro de Software">
+  <meta name="twitter:description" content="Desenvolvedor Back-End Java, Spring Boot, React, PostgreSQL & IA.">
+  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/49347578?v=4">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/49347578?v=4">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#090d16',
+            slateDark: '#0f172a',
+            primarySky: '#38bdf8',
+            accentEmerald: '#10b981',
+            accentIndigo: '#6366f1'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-obsidian text-slate-100 font-sans antialiased selection:bg-sky-500/30 selection:text-sky-200">
+
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow bg-sky-500 w-[500px] h-[500px] -top-32 -left-32"></div>
+  <div class="ambient-glow bg-indigo-600 w-[600px] h-[600px] top-1/3 -right-48"></div>
+  <div class="ambient-glow bg-emerald-500 w-[450px] h-[450px] bottom-1/4 -left-32"></div>
+
+  <!-- ==========================================================================
+       Navigation Bar
+       ========================================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo / Name -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="relative">
+          <img src="https://avatars.githubusercontent.com/u/49347578?v=4" alt="Mauricio Oliveira" class="w-10 h-10 rounded-full border border-sky-400/40 object-cover group-hover:scale-105 transition-transform">
+          <span class="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 rounded-full border-2 border-obsidian avatar-status-dot"></span>
+        </div>
+        <div>
+          <span class="font-bold text-base md:text-lg tracking-tight group-hover:text-sky-400 transition-colors">Mauricio Oliveira</span>
+          <span class="block text-xs text-slate-400 font-mono">Engenheiro de Software</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#sobre" class="desktop-nav-link text-sm text-slate-300 hover:text-sky-400 transition-colors">Sobre</a>
+        <a href="#experiencia" class="desktop-nav-link text-sm text-slate-300 hover:text-sky-400 transition-colors">Experiência</a>
+        <a href="#projetos" class="desktop-nav-link text-sm text-slate-300 hover:text-sky-400 transition-colors">Projetos</a>
+        <a href="#competencias" class="desktop-nav-link text-sm text-slate-300 hover:text-sky-400 transition-colors">Competências</a>
+        <a href="#formacao" class="desktop-nav-link text-sm text-slate-300 hover:text-sky-400 transition-colors">Formação</a>
+      </nav>
+
+      <!-- Desktop Actions -->
+      <div class="hidden md:flex items-center gap-3">
+        <!-- Direct CV Link -->
+        <a href="Profile.pdf" download="Mauricio_Oliveira_Curriculo.pdf" target="_blank" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-300 bg-slate-800/80 hover:bg-slate-700 hover:text-white border border-slate-700/60 transition-all">
+          <i data-lucide="file-down" class="w-4 h-4 text-sky-400"></i>
+          <span>Baixar CV</span>
+        </a>
+
+        <!-- WhatsApp Direct -->
+        <a href="https://wa.me/5548984570272?text=Ol%C3%A1%20Maur%C3%ADcio,%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar!" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold text-slate-900 bg-gradient-to-r from-emerald-400 to-teal-300 hover:from-emerald-300 hover:to-teal-200 shadow-lg shadow-emerald-500/20 transition-all">
+          <i data-lucide="message-square" class="w-4 h-4 text-slate-900"></i>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors" aria-label="Abrir Menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 bg-obsidian/95 backdrop-blur-xl px-4 pt-3 pb-6 space-y-3">
+      <a href="#sobre" class="mobile-nav-link block py-2 text-sm text-slate-300 hover:text-sky-400">Sobre</a>
+      <a href="#experiencia" class="mobile-nav-link block py-2 text-sm text-slate-300 hover:text-sky-400">Experiência</a>
+      <a href="#projetos" class="mobile-nav-link block py-2 text-sm text-slate-300 hover:text-sky-400">Projetos</a>
+      <a href="#competencias" class="mobile-nav-link block py-2 text-sm text-slate-300 hover:text-sky-400">Competências</a>
+      <a href="#formacao" class="mobile-nav-link block py-2 text-sm text-slate-300 hover:text-sky-400">Formação</a>
+      <div class="pt-4 border-t border-slate-800 flex flex-col gap-2.5">
+        <a href="Profile.pdf" download="Mauricio_Oliveira_Curriculo.pdf" target="_blank" class="w-full text-center py-2.5 rounded-xl text-xs font-semibold text-slate-200 bg-slate-800 border border-slate-700 flex items-center justify-center gap-2">
+          <i data-lucide="file-down" class="w-4 h-4 text-sky-400"></i>
+          Baixar Currículo (PDF)
+        </a>
+        <a href="https://wa.me/5548984570272?text=Ol%C3%A1%20Maur%C3%ADcio,%20vi%20seu%20portf%C3%B3lio!" target="_blank" class="w-full text-center py-2.5 rounded-xl text-xs font-semibold text-slate-900 bg-emerald-400 flex items-center justify-center gap-2">
+          <i data-lucide="message-square" class="w-4 h-4"></i>
+          Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Hero Section
+       ========================================================================== -->
+  <section id="hero" class="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <!-- Left Column: Headline & Bio -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Status Pill -->
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-medium">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Disponível para novos desafios • Tech Lead & Sênior</span>
+          </div>
+
+          <!-- Hero Headline -->
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15]">
+            Construindo soluções robustas com <span class="text-gradient-cyan">Java & Spring Boot</span>, microsserviços e <span class="text-gradient-emerald">Inteligência Artificial</span>.
+          </h1>
+
+          <!-- Executive Subtitle -->
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-normal">
+            Sou <strong>Mauricio Oliveira</strong>, Engenheiro de Software Full Stack com forte especialização em <strong>Back-End Java</strong>, arquitetura em camadas, modelagem <strong>PostgreSQL</strong> e aplicações corporativas de alto impacto. Experiência comprovada em automações contábeis, segurança com JWT e pipelines semânticos com <strong>pgVector & RAG</strong>.
+          </p>
+
+          <!-- Contact & Quick Action Buttons -->
+          <div class="flex flex-wrap items-center gap-3.5 pt-2">
+            <!-- WhatsApp Action -->
+            <a href="https://wa.me/5548984570272?text=Ol%C3%A1%20Maur%C3%ADcio,%20gostei%20muito%20do%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20trocar%20uma%20ideia!" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-5 py-3 rounded-xl font-semibold text-sm text-slate-950 bg-gradient-to-r from-emerald-400 via-teal-300 to-sky-400 hover:opacity-95 shadow-lg shadow-emerald-500/25 transition-all">
+              <i data-lucide="message-circle" class="w-4 h-4 text-slate-950"></i>
+              <span>Conversar no WhatsApp</span>
+            </a>
+
+            <!-- Copy Email Button -->
+            <button class="copy-email-btn inline-flex items-center gap-2.5 px-5 py-3 rounded-xl font-medium text-sm text-slate-200 bg-slate-900/90 hover:bg-slate-800 border border-slate-700/70 hover:border-sky-500/50 transition-all">
+              <i data-lucide="copy" class="w-4 h-4 text-sky-400"></i>
+              <span>Copiar E-mail</span>
+            </button>
+
+            <!-- Projects CTA -->
+            <a href="#projetos" class="inline-flex items-center gap-2 px-4 py-3 rounded-xl font-medium text-sm text-slate-400 hover:text-white transition-colors">
+              <span>Ver Projetos</span>
+              <i data-lucide="arrow-down" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <!-- Social Proof & Handles -->
+          <div class="pt-4 flex flex-wrap items-center gap-6 text-sm text-slate-400 border-t border-slate-800/80">
+            <a href="https://github.com/mauriciogoulart" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 hover:text-sky-400 transition-colors">
+              <i data-lucide="github" class="w-4 h-4"></i>
+              <span>github.com/mauriciogoulart</span>
+            </a>
+            <a href="https://www.linkedin.com/in/mauriciogoulartdev" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 hover:text-sky-400 transition-colors">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+              <span>linkedin.com/in/mauriciogoulartdev</span>
+            </a>
+            <div class="inline-flex items-center gap-2 text-slate-400">
+              <i data-lucide="map-pin" class="w-4 h-4 text-rose-400"></i>
+              <span>Tubarão, Santa Catarina - Brasil</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Terminal & Avatar Card -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <!-- Avatar Header Showcase -->
+          <div class="glass-card rounded-2xl p-6 relative overflow-hidden flex items-center gap-5">
+            <div class="relative shrink-0">
+              <img src="https://avatars.githubusercontent.com/u/49347578?v=4" alt="Mauricio Oliveira GitHub Profile" class="w-20 h-20 rounded-2xl object-cover border-2 border-sky-400/60 shadow-xl shadow-sky-500/20">
+              <span class="absolute -bottom-1 -right-1 w-5 h-5 bg-emerald-500 rounded-full border-2 border-slate-900 flex items-center justify-center" title="Ativo">
+                <i data-lucide="check" class="w-3 h-3 text-slate-950 stroke-[3]"></i>
+              </span>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h3 class="font-bold text-lg text-white">Mauricio Oliveira</h3>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-sky-500/20 text-sky-300 border border-sky-500/30">Senior Level</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-0.5">Alocado na Orprocon via Net Data</p>
+              <p class="text-xs text-sky-400 font-mono mt-2 flex items-center gap-1.5">
+                <i data-lucide="terminal" class="w-3.5 h-3.5"></i>
+                Java 21 • Spring Boot • PostgreSQL • pgVector
+              </p>
+            </div>
+          </div>
+
+          <!-- Interactive Terminal Window -->
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <div class="terminal-dot bg-rose-500"></div>
+                <div class="terminal-dot bg-amber-500"></div>
+                <div class="terminal-dot bg-emerald-500"></div>
+              </div>
+              <div class="flex items-center gap-1 text-[11px] font-mono">
+                <button class="terminal-tab px-2.5 py-1 rounded bg-slate-800 text-sky-400 border-b-2 border-sky-500 transition-all" data-tab="overview">overview.json</button>
+                <button class="terminal-tab px-2.5 py-1 rounded text-slate-400 hover:text-slate-200 transition-all" data-tab="metrics">metrics.log</button>
+                <button class="terminal-tab px-2.5 py-1 rounded text-slate-400 hover:text-slate-200 transition-all" data-tab="contact">contact.sh</button>
+              </div>
+            </div>
+
+            <!-- Terminal Output Area -->
+            <div class="p-5 font-mono text-xs leading-relaxed overflow-x-auto text-slate-200 min-h-[220px]" id="terminal-content">
+<span class="text-emerald-400"># Engenheiro de Software Full Stack & Especialista Back-End</span>
+<span class="text-slate-400">developer</span> = {
+  <span class="text-sky-300">"name"</span>: <span class="text-amber-300">"Mauricio Goulart de Oliveira"</span>,
+  <span class="text-sky-300">"location"</span>: <span class="text-amber-300">"Tubarão, SC - Brasil"</span>,
+  <span class="text-sky-300">"status"</span>: <span class="text-emerald-300">"Disponível para novos desafios / Tech Lead / Sênior"</span>,
+  <span class="text-sky-300">"specialties"</span>: [
+    <span class="text-amber-300">"Arquitetura de Microsserviços & APIs REST"</span>,
+    <span class="text-amber-300">"Ecossistema Java 17/21 & Spring Boot 3"</span>,
+    <span class="text-amber-300">"RAG, Busca Vetorial & PostgreSQL pgVector"</span>,
+    <span class="text-amber-300">"Modelagem Relacional de Alta Concorrência"</span>,
+    <span class="text-amber-300">"Front-End Moderno com React & Tailwind"</span>
+  ],
+  <span class="text-sky-300">"core_principles"</span>: [<span class="text-cyan-300">"SOLID"</span>, <span class="text-cyan-300">"Clean Architecture"</span>, <span class="text-cyan-300">"Fail-Fast"</span>, <span class="text-cyan-300">"Observability"</span>]
+};
+            </div>
+            <div class="px-5 py-2.5 bg-slate-950/70 border-t border-slate-900 flex items-center justify-between text-[11px] font-mono text-slate-500">
+              <span>status: 200 OK • zsh terminal</span>
+              <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> live</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Key Metrics / Performance Impact
+       ========================================================================== -->
+  <section class="py-12 border-y border-slate-800/80 bg-slate-950/40 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        
+        <div class="p-5 rounded-2xl bg-slate-900/40 border border-slate-800/60">
+          <div class="text-3xl md:text-4xl font-extrabold text-sky-400 font-mono tracking-tight">-85%</div>
+          <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold mt-2">Tempo de Conferência</div>
+          <p class="text-xs text-slate-400 mt-1">Automação de conciliação contábil e auditoria com Java & PostgreSQL.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/40 border border-slate-800/60">
+          <div class="text-3xl md:text-4xl font-extrabold text-emerald-400 font-mono tracking-tight">&lt; 180ms</div>
+          <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold mt-2">Latência RAG / pgVector</div>
+          <p class="text-xs text-slate-400 mt-1">Busca semântica de alta precisão sobre acervos documentais em PDF.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/40 border border-slate-800/60">
+          <div class="text-3xl md:text-4xl font-extrabold text-indigo-400 font-mono tracking-tight">Zero</div>
+          <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold mt-2">Falhas de Integridade</div>
+          <p class="text-xs text-slate-400 mt-1">Transações ACID seguras, isolamento de camadas e controle RBAC com JWT.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/40 border border-slate-800/60">
+          <div class="text-3xl md:text-4xl font-extrabold text-amber-400 font-mono tracking-tight">+5 Anos</div>
+          <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold mt-2">Imersão em Tecnologia</div>
+          <p class="text-xs text-slate-400 mt-1">Evolução contínua desde infraestrutura de alta disponibilidade a sistemas complexos.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Sobre Mim / Filosofia de Engenharia
+       ========================================================================== -->
+  <section id="sobre" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-16">
+        <span class="text-xs font-mono font-semibold uppercase tracking-widest text-sky-400">Perfil & Engenharia</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mt-2">
+          Arquitetura orientada a valor de negócio, código sustentável e alto desempenho.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        
+        <!-- Text Column -->
+        <div class="lg:col-span-7 space-y-6 text-slate-300 leading-relaxed text-base">
+          <p>
+            Atuo como <strong>Desenvolvedor Back-End e Full Stack</strong> com foco primordial na construção de aplicações escaláveis com <strong>Java e ecossistema Spring Boot</strong>, integrando bancos relacionais robustos como <strong>PostgreSQL</strong> e interfaces reativas em <strong>React</strong>.
+          </p>
+          <p>
+            Na minha atuação atual alocado na <strong>Orprocon via Net Data Computadores</strong>, liderei iniciativas críticas voltadas à <strong>automação de rotinas contábeis</strong>, eliminando gargalos operacionais crônicos por meio de sistemas de conciliação automatizados e sistemas de gestão com controle de acesso rigoroso (RBAC e JWT).
+          </p>
+          <p>
+            Além do back-end tradicional, aplico técnicas modernas de <strong>Inteligência Artificial Generativa e RAG (Retrieval-Augmented Generation)</strong> utilizando <strong>pgVector</strong> para busca semântica em base de dados, combinando a confiabilidade do código corporativo com a agilidade das novas tecnologias.
+          </p>
+          <p>
+            Minha abordagem prioriza a <strong>arquitetura em camadas</strong> (Controller, Service, Repository), práticas de <strong>Clean Code</strong>, conteinerização com <strong>Docker</strong> e esteiras ágeis (Scrum / Kanban), garantindo que cada software entregue seja testável, monitorável e fácil de manter ao longo do tempo.
+          </p>
+
+          <div class="pt-4 flex flex-wrap gap-3">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-300 font-mono">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i> Clean Architecture
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-300 font-mono">
+              <i data-lucide="database" class="w-3.5 h-3.5 text-sky-400"></i> Modelagem Relacional & pgVector
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-300 font-mono">
+              <i data-lucide="cpu" class="w-3.5 h-3.5 text-indigo-400"></i> RAG & AI Orchestration
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-300 font-mono">
+              <i data-lucide="box" class="w-3.5 h-3.5 text-amber-400"></i> Docker & Microservices
+            </span>
+          </div>
+        </div>
+
+        <!-- Cards Column -->
+        <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+          
+          <div class="glass-card rounded-xl p-5 border-l-4 border-l-sky-500">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-8 h-8 rounded-lg bg-sky-500/10 flex items-center justify-center text-sky-400">
+                <i data-lucide="layers" class="w-4 h-4"></i>
+              </div>
+              <h4 class="font-bold text-white text-sm">Resiliência & Separação de Conceitos</h4>
+            </div>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Design de APIs REST estruturadas em camadas desacopladas com validações consistentes, tratamento global de exceções e DTOs tipados.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl p-5 border-l-4 border-l-emerald-500">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                <i data-lucide="zap" class="w-4 h-4"></i>
+              </div>
+              <h4 class="font-bold text-white text-sm">Automação de Alto Impacto</h4>
+            </div>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Transformação de processos analógicos e manuais em rotinas automáticas de conciliação fiscal e relatórios preditivos orientados a dados.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-xl p-5 border-l-4 border-l-indigo-500">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-8 h-8 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400">
+                <i data-lucide="lock" class="w-4 h-4"></i>
+              </div>
+              <h4 class="font-bold text-white text-sm">Segurança & Controle de Acesso</h4>
+            </div>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Implementação de autorização granular por perfis (RBAC), criptografia de credenciais e proteção de endpoints sensíveis com JWT.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Experiência Profissional (Timeline)
+       ========================================================================== -->
+  <section id="experiencia" class="py-24 bg-slate-950/60 border-t border-slate-800/80 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+        <div>
+          <span class="text-xs font-mono font-semibold uppercase tracking-widest text-emerald-400">Histórico Profissional</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mt-2">Experiência & Entregas de Impacto</h2>
+        </div>
+        <a href="Profile.pdf" download="Mauricio_Oliveira_CV.pdf" target="_blank" class="inline-flex items-center gap-2 text-sm text-sky-400 hover:text-sky-300 font-medium">
+          <i data-lucide="file-text" class="w-4 h-4"></i>
+          <span>Acessar Currículo Completo em PDF</span>
+        </a>
+      </div>
+
+      <!-- Timeline Container -->
+      <div class="relative timeline-track pl-10 md:pl-12 space-y-12">
+        
+        <!-- Experience 1: Net Data / Orprocon -->
+        <div class="relative group">
+          <!-- Timeline Node -->
+          <div class="absolute -left-10 md:-left-12 top-1.5 w-6 h-6 rounded-full bg-obsidian border-2 border-emerald-400 flex items-center justify-center group-hover:scale-125 transition-transform">
+            <div class="w-2 h-2 rounded-full bg-emerald-400"></div>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 md:p-8 space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Posição Atual</span>
+                <h3 class="text-xl md:text-2xl font-bold text-white mt-2">Desenvolvedor Full Stack — Alocado na Orprocon</h3>
+                <p class="text-sm text-sky-400 font-medium">Net Data Computadores e Suprimentos • Tubarão, Santa Catarina</p>
+              </div>
+              <span class="text-xs font-mono text-slate-400 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800">
+                Setembro de 2026 — Presente
+              </span>
+            </div>
+
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Atuação terceirizada pela Net Data Computadores alocado na Orprocon, com liderança técnica e foco estratégico na <strong>automação de rotinas contábeis</strong>, redução de redundâncias e desenvolvimento de ecossistemas internos de alta confiabilidade.
+            </p>
+
+            <div class="space-y-2.5 pt-2">
+              <h4 class="text-xs uppercase font-mono tracking-wider text-slate-400 font-semibold">Principais Entregas & Conquistas:</h4>
+              <ul class="space-y-2 text-sm text-slate-300">
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Sistema de Conciliação Contábil:</strong> Plataforma automatizada para suporte imediato ao setor fiscal, reduzindo o tempo de conferência manual e auditoria de horas para poucos minutos.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Sistema de Gestão de Pessoas (RH/Compliance):</strong> Controle granular de acessos por perfil (RBAC), cadastro unificado e emissão de relatórios gerenciais com segurança JWT.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Automação de Planilhas & Ferramentas com IA:</strong> Criação de utilitários em Excel integrados a agentes inteligentes de IA para organização, estruturação e síntese de dados fiscais.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Desenvolvimento do Site Institucional:</strong> Engenharia completa do portal corporativo com design moderno, alta velocidade de carregamento e conformidade técnica.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800 flex flex-wrap gap-2">
+              <span class="badge-tech">Java</span>
+              <span class="badge-tech">Spring Boot</span>
+              <span class="badge-tech">React</span>
+              <span class="badge-tech">PostgreSQL</span>
+              <span class="badge-tech">Docker</span>
+              <span class="badge-tech">Automação com IA</span>
+              <span class="badge-tech">Excel Avançado</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2: MakerPixel -->
+        <div class="relative group">
+          <!-- Timeline Node -->
+          <div class="absolute -left-10 md:-left-12 top-1.5 w-6 h-6 rounded-full bg-obsidian border-2 border-sky-400 flex items-center justify-center group-hover:scale-125 transition-transform">
+            <div class="w-2 h-2 rounded-full bg-sky-400"></div>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 md:p-8 space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <h3 class="text-xl md:text-2xl font-bold text-white">Desenvolvedor Full Stack</h3>
+                <p class="text-sm text-sky-400 font-medium">MakerPixel TechSystem • Tubarão, Santa Catarina</p>
+              </div>
+              <span class="text-xs font-mono text-slate-400 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800">
+                Agosto de 2024 — Julho de 2025 (1 ano)
+              </span>
+            </div>
+
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Desenvolvimento e sustentação de ecossistema de aplicações web integradas, com foco em estabilidade operacional, integração contínua e interfaces responsivas de alta velocidade.
+            </p>
+
+            <div class="space-y-2.5 pt-2">
+              <h4 class="text-xs uppercase font-mono tracking-wider text-slate-400 font-semibold">Principais Entregas:</h4>
+              <ul class="space-y-2 text-sm text-slate-300">
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400 shrink-0 mt-0.5"></i>
+                  <span>Construção de interfaces modernas e responsivas utilizando React, conectadas a APIs resilientes em Spring Boot e PostgreSQL.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400 shrink-0 mt-0.5"></i>
+                  <span>Implementação de autenticação JWT segura e integração de serviços geolocalizados via API REST.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400 shrink-0 mt-0.5"></i>
+                  <span>Configuração de esteiras de deploy conteinerizado com Docker, garantindo paridade total entre ambientes de desenvolvimento e produção.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400 shrink-0 mt-0.5"></i>
+                  <span>Atuação ativa em cerimônias ágeis (Scrum / Kanban), resultando em redução sistemática de bugs em produção e aumento na cadência de entregas.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800 flex flex-wrap gap-2">
+              <span class="badge-tech">React</span>
+              <span class="badge-tech">Spring Boot</span>
+              <span class="badge-tech">PostgreSQL</span>
+              <span class="badge-tech">JWT</span>
+              <span class="badge-tech">Docker</span>
+              <span class="badge-tech">Scrum / Kanban</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 3: Radio Cidade Tubarao -->
+        <div class="relative group">
+          <!-- Timeline Node -->
+          <div class="absolute -left-10 md:-left-12 top-1.5 w-6 h-6 rounded-full bg-obsidian border-2 border-indigo-400 flex items-center justify-center group-hover:scale-125 transition-transform">
+            <div class="w-2 h-2 rounded-full bg-indigo-400"></div>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 md:p-8 space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <h3 class="text-xl md:text-2xl font-bold text-white">Técnico de Áudio, Vídeo e Infraestrutura</h3>
+                <p class="text-sm text-sky-400 font-medium">Rádio Cidade Tubarão • Tubarão, Santa Catarina</p>
+              </div>
+              <span class="text-xs font-mono text-slate-400 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800">
+                Novembro de 2021 — Fevereiro de 2023 (1 ano 4 meses)
+              </span>
+            </div>
+
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Responsável pelo suporte operacional e infraestrutura técnica de transmissões ao vivo em alta exigência de disponibilidade, estabilidade de sinal e contingência de falhas em tempo real.
+            </p>
+
+            <div class="space-y-2.5 pt-2">
+              <ul class="space-y-2 text-sm text-slate-300">
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-400 shrink-0 mt-0.5"></i>
+                  <span>Garantia de 99.9% de uptime nas transmissões ao vivo, gerenciamento de fluxos de dados multimídia e monitoramento de rede.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-400 shrink-0 mt-0.5"></i>
+                  <span>Desenvolvimento de rotinas de contingência e backup sistemático, mitigando perdas operacionais em transmissões críticas.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800 flex flex-wrap gap-2">
+              <span class="badge-tech">Infraestrutura em Tempo Real</span>
+              <span class="badge-tech">Rotinas de Backup & Contingência</span>
+              <span class="badge-tech">Transmissão Multimídia</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Projetos em Destaque (Filtro Interativo + Modal)
+       ========================================================================== -->
+  <section id="projetos" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="text-xs font-mono font-semibold uppercase tracking-widest text-sky-400">Portfólio de Engenharia</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mt-2">Projetos em Destaque & Repositórios</h2>
+          <p class="text-sm text-slate-400 mt-2 max-w-xl">
+            Soluções corporativas em produção e projetos open source no GitHub demonstrando arquitetura limpa, IA vetorial e escalabilidade.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap items-center gap-2">
+          <button class="filter-btn text-xs font-semibold px-3.5 py-2 rounded-xl bg-sky-500/20 text-sky-400 border border-sky-500/40 transition-all" data-filter="all">
+            Todos
+          </button>
+          <button class="filter-btn text-xs font-semibold px-3.5 py-2 rounded-xl bg-slate-800/60 text-slate-400 border border-slate-700/40 transition-all" data-filter="backend">
+            Java & Back-End
+          </button>
+          <button class="filter-btn text-xs font-semibold px-3.5 py-2 rounded-xl bg-slate-800/60 text-slate-400 border border-slate-700/40 transition-all" data-filter="ai">
+            IA & pgVector
+          </button>
+          <button class="filter-btn text-xs font-semibold px-3.5 py-2 rounded-xl bg-slate-800/60 text-slate-400 border border-slate-700/40 transition-all" data-filter="fullstack">
+            Full Stack & Cloud
+          </button>
+        </div>
+      </div>
+
+      <!-- Dynamic Projects Grid (Populated by main.js) -->
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered via JavaScript -->
+      </div>
+
+      <!-- GitHub Profile Callout -->
+      <div class="mt-14 glass-card rounded-2xl p-8 border border-sky-500/30 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-5">
+          <div class="w-14 h-14 rounded-2xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center shrink-0">
+            <i data-lucide="github" class="w-7 h-7 text-sky-400"></i>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold text-white">Mais repositórios e contribuições no GitHub</h4>
+            <p class="text-sm text-slate-400 mt-0.5">Explore códigos-fonte adicionais, forks de estudos avançados de MBA e desafios técnicos.</p>
+          </div>
+        </div>
+        <a href="https://github.com/mauriciogoulart" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-5 py-3 rounded-xl text-sm font-semibold text-slate-900 bg-sky-400 hover:bg-sky-300 transition-colors shrink-0">
+          <span>Ver Perfil @mauriciogoulart</span>
+          <i data-lucide="external-link" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Competências Técnicas & Arquitetura
+       ========================================================================== -->
+  <section id="competencias" class="py-24 bg-slate-950/60 border-t border-slate-800/80 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-16">
+        <span class="text-xs font-mono font-semibold uppercase tracking-widest text-indigo-400">Stack & Habilidades</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mt-2">Competências Técnicas Estruturadas</h2>
+        <p class="text-sm text-slate-400 mt-2">Tecnologias dominadas na prática em sistemas corporativos e projetos de engenharia avançada.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Pillar 1: Back-End Core -->
+        <div class="glass-card rounded-2xl p-6 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400">
+              <i data-lucide="server" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-white text-base">Back-End & Ecossistema Java</h3>
+              <p class="text-xs text-slate-400 font-mono">Core Engineering</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Construção de APIs robustas com tipagem estrita, gerenciamento de dependências e arquitetura em camadas.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-2">
+            <span class="badge-tech">Java 17/21</span>
+            <span class="badge-tech">Spring Boot 3</span>
+            <span class="badge-tech">Spring Security</span>
+            <span class="badge-tech">JPA / Hibernate</span>
+            <span class="badge-tech">RESTful APIs</span>
+            <span class="badge-tech">JWT Auth</span>
+            <span class="badge-tech">Maven / Gradle</span>
+          </div>
+        </div>
+
+        <!-- Pillar 2: Bancos & Vetores -->
+        <div class="glass-card rounded-2xl p-6 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+              <i data-lucide="database" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-white text-base">Bancos de Dados & pgVector</h3>
+              <p class="text-xs text-slate-400 font-mono">Data Persistence & RAG</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Modelagem relacional de alta performance, integridade referencial ACID e indexação vetorial para embeddings.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-2">
+            <span class="badge-tech">PostgreSQL</span>
+            <span class="badge-tech">pgVector</span>
+            <span class="badge-tech">Modelagem de Dados</span>
+            <span class="badge-tech">Otimização de Queries</span>
+            <span class="badge-tech">Transações ACID</span>
+            <span class="badge-tech">Migrations</span>
+          </div>
+        </div>
+
+        <!-- Pillar 3: Front-End & Reatividade -->
+        <div class="glass-card rounded-2xl p-6 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i data-lucide="layout" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-white text-base">Front-End & UI Reativa</h3>
+              <p class="text-xs text-slate-400 font-mono">Modern Interfaces</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Criação de interfaces responsivas, consumo eficiente de endpoints REST e experiência do usuário fluida.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-2">
+            <span class="badge-tech">React.js</span>
+            <span class="badge-tech">JavaScript (ES6+)</span>
+            <span class="badge-tech">Tailwind CSS</span>
+            <span class="badge-tech">HTML5 / CSS3</span>
+            <span class="badge-tech">Axios / Fetch</span>
+            <span class="badge-tech">Componentização</span>
+          </div>
+        </div>
+
+        <!-- Pillar 4: Inteligência Artificial & RAG -->
+        <div class="glass-card rounded-2xl p-6 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-white text-base">Inteligência Artificial & RAG</h3>
+              <p class="text-xs text-slate-400 font-mono">Applied GenAI</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Engenharia de prompts estruturados, orquestração de embeddings e pipelines de busca semântica em PDF/documentos.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-2">
+            <span class="badge-tech">RAG Pipelines</span>
+            <span class="badge-tech">Embeddings Vetoriais</span>
+            <span class="badge-tech">OpenAI API</span>
+            <span class="badge-tech">Python</span>
+            <span class="badge-tech">Automação com IA</span>
+            <span class="badge-tech">Prompt Engineering</span>
+          </div>
+        </div>
+
+        <!-- Pillar 5: DevOps & Conteinerização -->
+        <div class="glass-card rounded-2xl p-6 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
+              <i data-lucide="container" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-white text-base">DevOps & Infraestrutura</h3>
+              <p class="text-xs text-slate-400 font-mono">Containers & Deployment</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Isolamento de dependências com Docker, automação de esteiras com Git/GitHub e implantação em nuvem.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-2">
+            <span class="badge-tech">Docker</span>
+            <span class="badge-tech">Docker Compose</span>
+            <span class="badge-tech">Git / GitHub Flow</span>
+            <span class="badge-tech">AWS (Lambda/Cognito)</span>
+            <span class="badge-tech">CI/CD Pipelines</span>
+            <span class="badge-tech">Linux / Shell</span>
+          </div>
+        </div>
+
+        <!-- Pillar 6: Metodologias & Práticas de Engenharia -->
+        <div class="glass-card rounded-2xl p-6 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-400">
+              <i data-lucide="git-branch" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-white text-base">Metodologias & Clean Code</h3>
+              <p class="text-xs text-slate-400 font-mono">Best Practices</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Processos de entrega estruturada com foco em valor contínuo, previsibilidade e manutenibilidade técnica.
+          </p>
+          <div class="flex flex-wrap gap-1.5 pt-2">
+            <span class="badge-tech">Scrum / Kanban</span>
+            <span class="badge-tech">Clean Code</span>
+            <span class="badge-tech">SOLID</span>
+            <span class="badge-tech">Code Review</span>
+            <span class="badge-tech">Documentação de APIs</span>
+            <span class="badge-tech">Testes Unitários</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Formação Acadêmica & Certificações
+       ========================================================================== -->
+  <section id="formacao" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mb-16">
+        <span class="text-xs font-mono font-semibold uppercase tracking-widest text-emerald-400">Educação Contínua</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mt-2">Formação Acadêmica & Certificações</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Acadêmico -->
+        <div class="lg:col-span-5 space-y-6">
+          <h3 class="text-lg font-bold text-white flex items-center gap-2">
+            <i data-lucide="graduation-cap" class="w-5 h-5 text-sky-400"></i>
+            Graduação de Nível Superior
+          </h3>
+
+          <div class="glass-card rounded-2xl p-6 space-y-3 border-l-4 border-l-sky-500">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-sky-400 font-semibold">Ensino Superior</span>
+              <span class="text-xs font-mono text-slate-400">2026 — 2028</span>
+            </div>
+            <h4 class="text-lg font-bold text-white">Análise e Desenvolvimento de Sistemas (ADS)</h4>
+            <p class="text-sm text-slate-300">UniCesumar</p>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Formação com ênfase em engenharia de requisitos, arquitetura de software, modelagem de banco de dados e computação aplicada.
+            </p>
+          </div>
+        </div>
+
+        <!-- Certificações -->
+        <div class="lg:col-span-7 space-y-6">
+          <h3 class="text-lg font-bold text-white flex items-center gap-2">
+            <i data-lucide="award" class="w-5 h-5 text-emerald-400"></i>
+            Certificações & Especializações Técnicas
+          </h3>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <div class="glass-card rounded-xl p-5 space-y-2">
+              <div class="flex items-center justify-between text-xs text-slate-400 font-mono">
+                <span>Santander Open Academy</span>
+                <span>2025</span>
+              </div>
+              <h5 class="text-sm font-bold text-white">Excel com IA para Análise de Dados</h5>
+              <p class="text-xs text-slate-400">Manipulação avançada de dados, relatórios e automação com inteligência artificial.</p>
+            </div>
+
+            <div class="glass-card rounded-xl p-5 space-y-2">
+              <div class="flex items-center justify-between text-xs text-slate-400 font-mono">
+                <span>Senai PR - Tecnologia</span>
+                <span>2024</span>
+              </div>
+              <h5 class="text-sm font-bold text-white">Desenvolvimento Back-End</h5>
+              <p class="text-xs text-slate-400">Estruturação de servidores, regras de negócio e persistência relacional.</p>
+            </div>
+
+            <div class="glass-card rounded-xl p-5 space-y-2">
+              <div class="flex items-center justify-between text-xs text-slate-400 font-mono">
+                <span>Senai PR - Tecnologia</span>
+                <span>2024</span>
+              </div>
+              <h5 class="text-sm font-bold text-white">Desenvolvimento Front-End</h5>
+              <p class="text-xs text-slate-400">Aplicações modernas em JavaScript/React, responsividade e componentização.</p>
+            </div>
+
+            <div class="glass-card rounded-xl p-5 space-y-2">
+              <div class="flex items-center justify-between text-xs text-slate-400 font-mono">
+                <span>Senai Tubarão SC</span>
+                <span>2024</span>
+              </div>
+              <h5 class="text-sm font-bold text-white">Qualificação & Aperfeiçoamento em Programação</h5>
+              <p class="text-xs text-slate-400">Fundamentos sólidos de algoritmos, lógica de programação e boas práticas.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Contato / Call to Action Final
+       ========================================================================== -->
+  <section id="contato" class="py-24 bg-gradient-to-b from-slate-950 to-obsidian border-t border-slate-800/80 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="glass-card rounded-3xl p-8 md:p-14 border border-sky-500/20 max-w-4xl mx-auto text-center space-y-8">
+        
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-mono">
+          <i data-lucide="terminal" class="w-3.5 h-3.5"></i>
+          <span>Vamos construir o próximo projeto de sucesso?</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+          Pronto para elevar o nível técnico e a velocidade do seu time.
+        </h2>
+
+        <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          Seja para liderar a arquitetura de novas soluções em <strong>Java/Spring Boot</strong>, automatizar processos críticos corporativos ou integrar <strong>inteligência artificial</strong> às suas rotinas, estou pronto para conversar.
+        </p>
+
+        <!-- Direct Contact Action Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <!-- WhatsApp Primary Button -->
+          <a href="https://wa.me/5548984570272?text=Ol%C3%A1%20Maur%C3%ADcio,%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20fazer%20uma%20proposta!" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl text-sm font-bold text-slate-950 bg-gradient-to-r from-emerald-400 to-teal-300 hover:from-emerald-300 hover:to-teal-200 shadow-xl shadow-emerald-500/20 transition-all">
+            <i data-lucide="message-circle" class="w-5 h-5 text-slate-950"></i>
+            <span>Iniciar Conversa no WhatsApp</span>
+          </a>
+
+          <!-- Email Action Button -->
+          <a href="mailto:mauriciogoulart.deoliveira37@gmail.com" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl text-sm font-semibold text-slate-200 bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-sky-500/50 transition-all">
+            <i data-lucide="mail" class="w-5 h-5 text-sky-400"></i>
+            <span>Enviar E-mail</span>
+          </a>
+
+          <!-- Copy Email Button -->
+          <button class="copy-email-btn inline-flex items-center gap-2 px-4 py-3.5 rounded-xl text-sm font-medium text-slate-400 hover:text-white bg-slate-900/60 border border-slate-800 hover:border-slate-700 transition-all">
+            <i data-lucide="copy" class="w-4 h-4"></i>
+            <span>Copiar E-mail</span>
+          </button>
+        </div>
+
+        <!-- Contact Detail Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-slate-800/80 text-left">
+          <div class="p-4 rounded-xl bg-slate-900/50 border border-slate-800">
+            <div class="text-xs text-slate-400 font-mono">Telefone / WhatsApp</div>
+            <div class="text-sm font-bold text-white mt-1">(48) 98457-0272</div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-900/50 border border-slate-800">
+            <div class="text-xs text-slate-400 font-mono">E-mail Principal</div>
+            <div class="text-xs font-bold text-white mt-1 break-all">mauriciogoulart.deoliveira37@gmail.com</div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-900/50 border border-slate-800">
+            <div class="text-xs text-slate-400 font-mono">Localização</div>
+            <div class="text-sm font-bold text-white mt-1">Tubarão, Santa Catarina</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Rodapé
+       ========================================================================== -->
+  <footer class="py-12 border-t border-slate-900 bg-obsidian text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <img src="https://avatars.githubusercontent.com/u/49347578?v=4" alt="Mauricio Oliveira" class="w-8 h-8 rounded-full border border-slate-700">
+        <div>
+          <span class="font-bold text-slate-200">Mauricio Oliveira</span> • Engenharia de Software
+          <p class="text-[11px] text-slate-400">© <span id="current-year">2026</span> Todos os direitos reservados.</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="https://github.com/mauriciogoulart" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/in/mauriciogoulartdev" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition-colors">LinkedIn</a>
+        <a href="Profile.pdf" download="Mauricio_Oliveira_Curriculo.pdf" target="_blank" class="hover:text-sky-400 transition-colors">Download CV</a>
+        <a href="#hero" class="hover:text-white transition-colors flex items-center gap-1 font-mono">
+          <span>Topo</span>
+          <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Project Deep Dive Modal
+       ========================================================================== -->
+  <div id="project-modal" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+    <div class="modal-dialog glass-card bg-slate-900 border border-slate-700/80 rounded-2xl max-w-2xl w-full p-6 sm:p-8 space-y-6 max-h-[90vh] overflow-y-auto">
+      
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <h3 id="modal-title" class="text-2xl font-bold text-white tracking-tight">Título do Projeto</h3>
+          <p id="modal-subtitle" class="text-xs font-mono text-sky-400 mt-1">Subtítulo e Empresa</p>
+        </div>
+        <button id="modal-close-btn" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors" aria-label="Fechar Modal">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="space-y-4 text-sm text-slate-300">
+        <div>
+          <h4 class="text-xs font-mono uppercase tracking-wider text-slate-400 font-semibold mb-1">Visão Geral</h4>
+          <p id="modal-description" class="leading-relaxed"></p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-950/70 border border-slate-800 space-y-2">
+          <h4 class="text-xs font-mono uppercase tracking-wider text-sky-400 font-semibold flex items-center gap-1.5">
+            <i data-lucide="cpu" class="w-4 h-4"></i>
+            Arquitetura & Engenharia
+          </h4>
+          <p id="modal-architecture" class="text-xs text-slate-300 leading-relaxed"></p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-emerald-950/30 border border-emerald-500/20 space-y-2">
+          <h4 class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-semibold flex items-center gap-1.5">
+            <i data-lucide="trending-up" class="w-4 h-4"></i>
+            Impacto & Resultados Mensurados
+          </h4>
+          <p id="modal-impact" class="text-xs text-emerald-200 leading-relaxed"></p>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-mono uppercase tracking-wider text-slate-400 font-semibold mb-2">Stack Tecnológico</h4>
+          <div id="modal-tags" class="flex flex-wrap gap-2"></div>
+        </div>
+      </div>
+
+      <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+        <a id="modal-github-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold text-slate-900 bg-sky-400 hover:bg-sky-300 transition-colors">
+          <i data-lucide="github" class="w-4 h-4"></i>
+          <span>Acessar Código no GitHub</span>
+        </a>
+        <button onclick="document.getElementById('project-modal').classList.remove('active'); document.body.style.overflow='';" class="text-xs font-semibold px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors">
+          Fechar
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Toast Notification
+       ========================================================================== -->
+  <div id="toast-notification" class="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-slate-900/95 border border-sky-500/40 text-slate-100 shadow-2xl backdrop-blur-xl">
+    <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+      <i data-lucide="check" class="w-4 h-4 stroke-[3]"></i>
+    </div>
+    <span id="toast-message" class="text-xs sm:text-sm font-medium">E-mail copiado para a área de transferência!</span>
+  </div>
+
+  <!-- Custom Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
