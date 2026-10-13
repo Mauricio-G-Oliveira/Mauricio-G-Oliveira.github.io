@@ -74,20 +74,44 @@ function setupEmailCopy() {
 function setupMobileMenu() {
   const menuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
   const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
   if (!menuBtn || !mobileMenu) return;
 
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+  function setMenuState(open) {
+    if (open) {
+      mobileMenu.classList.remove('hidden');
+      if (hamburgerIcon) hamburgerIcon.classList.add('hidden');
+      if (closeIcon) closeIcon.classList.remove('hidden');
+    } else {
+      mobileMenu.classList.add('hidden');
+      if (hamburgerIcon) hamburgerIcon.classList.remove('hidden');
+      if (closeIcon) closeIcon.classList.add('hidden');
+    }
+  }
+
+  menuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isClosed = mobileMenu.classList.contains('hidden');
+    setMenuState(isClosed);
   });
 
   mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
+      setMenuState(false);
     });
   });
+
+  // Fecha o menu ao clicar fora dele
+  document.addEventListener('click', (e) => {
+    if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+      setMenuState(false);
+    }
+  });
 }
+
 
 /* ==========================================================================
    Project Data & Filter Management

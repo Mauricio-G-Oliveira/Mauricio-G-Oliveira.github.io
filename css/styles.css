@@ -29,7 +29,14 @@
   background: #334155;
 }
 
-/* Base Body Smoothing */
+/* Base Body Smoothing & Strict Mobile Containment */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+  position: relative;
+}
+
 html {
   scroll-behavior: smooth;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -39,7 +46,6 @@ html {
 body {
   background-color: var(--bg-primary);
   color: #f1f5f9;
-  overflow-x: hidden;
   min-height: 100vh;
 }
 
