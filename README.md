@@ -1,6 +1,8 @@
 # Portfólio Profissional Sênior - Mauricio Oliveira
 
-Website de portfólio profissional de nível **Sênior** desenvolvido para **Mauricio Oliveira**, destacando sua atuação como **Engenheiro de Software Full Stack & Especialista Back-End Java / Spring Boot**, projetos com **PostgreSQL & pgVector (IA / RAG)**, experiências corporativas na **Net Data / Orprocon** e **MakerPixel**, além de formação acadêmica e certificações.
+> 🌐 **Site no ar (GitHub Pages)**: [https://mauricio-g-oliveira.github.io/](https://mauricio-g-oliveira.github.io/)
+
+Website de portfólio profissional de nível **Sênior** desenvolvido para **Mauricio Oliveira**, destacando sua atuação como **Engenheiro de Software Full Stack & Especialista Back-End Java / Spring Boot**, projetos com **PostgreSQL & Docker**, soluções corporativas na **Net Data / Orprocon** e **MakerPixel**, além de formação acadêmica e certificações.
 
 ---
 
