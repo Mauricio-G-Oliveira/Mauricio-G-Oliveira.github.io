@@ -1,6 +1,6 @@
 /**
  * Portfolio JavaScript - Mauricio Oliveira
- * Senior Software Engineer & Back-End Specialist
+ * Desenvolvedor Full Stack Java (Spring Boot + React)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -87,8 +87,6 @@ function setupMobileMenu() {
       if (closeIcon) closeIcon.classList.remove('hidden');
     } else {
       mobileMenu.classList.add('hidden');
-      if (hamburgerIcon) hamburgerIcon.classList.remove('hidden');
-      if (closeIcon) closeIcon.classList.add('hidden');
     }
   }
 
@@ -104,7 +102,6 @@ function setupMobileMenu() {
     });
   });
 
-  // Fecha o menu ao clicar fora dele
   document.addEventListener('click', (e) => {
     if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
       setMenuState(false);
@@ -112,93 +109,83 @@ function setupMobileMenu() {
   });
 }
 
-
 /* ==========================================================================
    Project Data & Filter Management
    ========================================================================== */
 const projectsData = [
   {
-    id: 'stageflow-backend',
-    title: 'StageFlow Back-End API REST',
-    category: 'backend',
-    subtitle: 'Arquitetura Java 21, Spring Boot 3 & PostgreSQL',
-    company: 'Mauricio-G-Oliveira / GitHub Open Source',
-    description: 'API RESTful completa construída para a plataforma StageFlow, fornecendo autenticação segura com JWT, gerenciamento de permissões, persistência relacional com JPA/Hibernate no PostgreSQL e endpoints documentados.',
-    architecture: 'Arquitetura limpa em camadas (Controller, Service, Repository, DTOs). Modelagem relacional robusta, tratamento global de exceções, migrations versionadas e esteira conteinerizada com Docker.',
-    impact: 'Alta performance com tempo de resposta sub-100ms em operações de consulta e suporte a escalabilidade horizontal.',
-    tags: ['Java 21', 'Spring Boot 3', 'Spring Security', 'JWT', 'PostgreSQL', 'Docker', 'Maven'],
-    githubUrl: 'https://github.com/Mauricio-G-Oliveira/stageflow-backend',
-    badge: 'GitHub Open Source',
-    isEnterprise: false
-  },
-  {
-    id: 'conciliacao-contabil',
-    title: 'Sistema de Conciliação Contábil & Auditoria',
-    category: 'enterprise',
-    subtitle: 'Solução Corporativa de Missão Crítica',
-    company: 'Orprocon / Net Data Computadores',
-    description: 'Sistema corporativo voltado para a automação e auditoria contábil. Responsável pela validação em lote de registros financeiros, reduzindo o tempo de conferência manual de horas para poucos minutos.',
-    architecture: 'Arquitetura limpa em camadas isolando regras fiscais complexas, transações ACID rigorosas no PostgreSQL, geração de relatórios sintéticos e logs de auditoria detalhados.',
-    impact: 'Redução de 85% no tempo de conferência contábil mensal e mitigação total de erros humanos de digitação e duplicidade.',
-    tags: ['Java', 'Spring Boot', 'PostgreSQL', 'Docker', 'Clean Architecture', 'JPA/Hibernate'],
-    githubUrl: null,
-    badge: 'Enterprise / Em Produção',
+    id: 'central-contabil',
+    title: 'Central Contábil / NotaSync',
+    category: 'fullstack',
+    subtitle: 'SaaS para Escritórios Contábeis de SC',
+    company: 'MakerPixel Techsystem',
+    description: 'Plataforma SaaS para captura automática de NFC-e direto da SEF/SC com certificado digital A1 do contador, conciliação bancária multi-extratos e motor de auditoria contábil com conferência da Reforma Tributária (IBS/CBS).',
+    architecture: 'Multi-tenant por escritorio_id, cofre criptografado para certificados digitais com AES-256-GCM, migrations versionadas com Flyway, rotinas noturnas com cron autenticado e integração com a calculadora pública da Receita Federal (RTC).',
+    impact: 'Eliminação da cobrança manual de XMLs junto aos clientes do escritório, conferência item a item de alíquotas da Reforma Tributária e segurança de credenciais em repouso.',
+    tags: ['Java 21', 'Spring Boot 3', 'React', 'TypeScript', 'PostgreSQL', 'Flyway', 'AES-256-GCM', 'Supabase', 'Tailwind CSS'],
+    githubUrl: 'https://github.com/Mauricio-G-Oliveira/makerpixel-central-contabil',
+    liveUrl: 'https://www.makerpixeltech.com.br',
+    badge: 'Programa Piloto',
     isEnterprise: true
   },
   {
-    id: 'stageflow-frontend',
-    title: 'StageFlow Front-End Application',
+    id: 'stageflow-platform',
+    title: 'StageFlow — Gestão de Palco & Shows',
     category: 'fullstack',
-    subtitle: 'Gestão de Eventos, Músicos e Repertório',
-    company: 'Mauricio-G-Oliveira / GitHub Open Source',
-    description: 'Interface de usuário dinâmica e de alta performance desenvolvida em React, TypeScript e Vite. Fornece controle em tempo real de escalas, gerenciamento de repertório musical e contratos para eventos.',
-    architecture: 'Componentização modular com TypeScript tipado estritamente, consumo reativo da API REST via Axios, gerenciamento de estado previsível e interface responsiva com Tailwind CSS.',
-    impact: 'Experiência fluida e instantânea com carregamento em menos de 1 segundo através de bundling otimizado com Vite.',
-    tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Axios', 'REST API'],
+    subtitle: 'Gestão de Músicos, Repertório e Contratos',
+    company: 'MakerPixel / Projeto Próprio',
+    description: 'Plataforma completa para gestão operacional de bandas: escalas de shows, controle de cachês, geração de propostas comerciais em PDF e setlist dinâmico sincronizado em tempo real.',
+    architecture: 'Arquitetura desacoplada: Back-end RESTful com Java 21, Spring Boot 3, Spring Security com JWT stateless e PostgreSQL. Front-end PWA moderno em React 19, TypeScript e Tailwind CSS.',
+    impact: 'Atualmente em uso real pela Banda Livert para gestão de todas as apresentações; versão comercial com roadmap para 2027.',
+    tags: ['Java 21', 'Spring Boot 3', 'Spring Security', 'JWT', 'React', 'TypeScript', 'PostgreSQL', 'Docker'],
     githubUrl: 'https://github.com/Mauricio-G-Oliveira/stageflow',
-    badge: 'GitHub Open Source',
+    liveUrl: 'https://mauricio-g-oliveira.github.io/stageflow/',
+    badge: 'Em Uso (Banda)',
     isEnterprise: false
   },
   {
-    id: 'gestao-pessoas-rbac',
-    title: 'Sistema de Gestão de Pessoas & RBAC',
+    id: 'fintech-core-ledger',
+    title: 'Fintech Core Ledger',
+    category: 'backend',
+    subtitle: 'Motor de Partidas Dobradas & Controle de Concorrência',
+    company: 'Projeto de Estudo Pessoal',
+    description: 'Projeto de estudo focado na implementação de um livro-razão (ledger) financeiro estrito por partidas dobradas (Double-Entry Bookkeeping), garantindo a invariante contábil de soma de débitos igual à soma de créditos.',
+    architecture: 'Modelagem orientada a domínio (DDD), isolamento de concorrência com ordenação determinística de travas pessimistas (SELECT FOR UPDATE) para eliminar deadlocks, interceptor com chave de idempotência UUIDv7 e testes com Testcontainers e ArchUnit.',
+    impact: 'Simulação interativa live no GitHub Pages com disparo de requisições concorrentes simultâneas demonstrando mitigação total de colisões e idempotência.',
+    tags: ['Java 21', 'Spring Boot 3', 'PostgreSQL', 'Flyway', 'Testcontainers', 'ArchUnit', 'React', 'Vite'],
+    githubUrl: 'https://github.com/Mauricio-G-Oliveira/fintech-core-ledger',
+    liveUrl: 'https://mauricio-g-oliveira.github.io/fintech-core-ledger/',
+    badge: 'Projeto de Estudo',
+    isEnterprise: false
+  },
+  {
+    id: 'makerpixel-site',
+    title: 'MakerPixel Techsystem — Website',
     category: 'enterprise',
-    subtitle: 'Controle de Acesso Granular & Compliance',
-    company: 'Orprocon / Net Data Computadores',
-    description: 'Plataforma integrada de gestão corporativa de colaboradores com controle de acesso baseado em papéis (Role-Based Access Control), gerenciamento de permissões dinâmicas e emissão de relatórios analíticos.',
-    architecture: 'Back-end em Spring Boot provendo API REST segura com JWT e Spring Security. Front-end reativo com componentes modulares e validações estritas de sessão.',
-    impact: 'Padronização da segurança operacional de múltiplos setores internos e conformidade com requisitos de segurança e compliance de dados.',
-    tags: ['Java', 'Spring Boot', 'Spring Security', 'JWT', 'React', 'PostgreSQL'],
-    githubUrl: null,
-    badge: 'Enterprise / Em Produção',
-    isEnterprise: true
-  },
-  {
-    id: 'makerpixel-suite',
-    title: 'MakerPixel TechSystem — Plataforma Oficial',
-    category: 'fullstack',
-    subtitle: 'Soluções Corporativas em Sites & Sistemas Web',
-    company: 'MakerPixel TechSystem',
-    description: 'Desenvolvimento e arquitetura da plataforma institucional e módulos de serviços da MakerPixel TechSystem, integrando design moderno, alta taxa de conversão e painel administrativo integrado.',
-    architecture: 'Design responsivo, boas práticas de SEO, estrutura modular de componentes e integração com serviços analíticos.',
-    impact: 'Consolidação da presença digital da software house e sustentação técnica contínua com 99.9% de disponibilidade.',
-    tags: ['React', 'TypeScript', 'Tailwind CSS', 'UI/UX', 'SEO', 'Web Performance'],
+    subtitle: 'Portal Institucional & Apresentação Comercial',
+    company: 'MakerPixel Techsystem',
+    description: 'Website oficial da MakerPixel Techsystem, apresentando as soluções de software para o mercado contábil, informações institucionais, conformidade LGPD e canal direto com o desenvolvedor.',
+    architecture: 'Desenvolvimento modular em HTML5 semântico, Tailwind CSS, JavaScript modular com SITE_CONFIG centralizado e conformidade técnica e regulatória.',
+    impact: 'Canal de captação para o programa piloto do NotaSync junto a escritórios contábeis de Santa Catarina.',
+    tags: ['JavaScript', 'HTML5/CSS3', 'Tailwind CSS', 'LGPD', 'Lucide Icons'],
     githubUrl: 'https://github.com/Mauricio-G-Oliveira/makerpixelsite',
-    badge: 'Produção / GitHub',
-    isEnterprise: false
+    liveUrl: 'https://www.makerpixeltech.com.br',
+    badge: 'Produção',
+    isEnterprise: true
   },
   {
     id: 'banda-livert-portal',
-    title: 'Portal Oficial & Mídia Banda Livert',
+    title: 'Banda Livert — Website & Press Kit',
     category: 'fullstack',
-    subtitle: 'Rock, Pop & Flashback (Tubarão/SC)',
-    company: 'Mauricio-G-Oliveira / GitHub Open Source',
-    description: 'Portal oficial da banda com agenda de shows, integração de mídias de alta fidelidade de áudio e vídeo, galeria responsiva e canal direto de contratação para eventos.',
-    architecture: 'Desenvolvimento focado em experiência mobile-first, carregamento assíncrono de mídia pesada e performance extrema de renderização.',
-    impact: 'Mais de 100% de aumento no engajamento de público e facilidade na conversão de novos contratos para eventos na região sul de SC.',
-    tags: ['JavaScript', 'HTML5/CSS3', 'Mobile First', 'Multimídia', 'Performance'],
+    subtitle: 'Site Institucional & Press Kit Digital',
+    company: 'Banda Livert',
+    description: 'Website institucional com agenda de apresentações sincronizada para contratantes de eventos e casas de shows, galeria de fotos em alta resolução, bio dos integrantes e press kit completo para download.',
+    architecture: 'Desenvolvimento mobile-first de alta performance, carregamento assíncrono de mídia pesada e canal direto de contratação.',
+    impact: 'Centralização de todas as informações de contratação e portfólio da banda em circulação na região sul de Santa Catarina.',
+    tags: ['JavaScript', 'HTML5/CSS3', 'Tailwind CSS', 'Mobile First', 'UI/UX'],
     githubUrl: 'https://github.com/Mauricio-G-Oliveira/banda-livert',
-    badge: 'GitHub Open Source',
+    liveUrl: null,
+    badge: 'Produção',
     isEnterprise: false
   }
 ];
@@ -356,30 +343,31 @@ function setupTerminal() {
 
   const tabContents = {
     overview: `
-<span class="text-emerald-400"># Engenheiro de Software Full Stack & Especialista Back-End</span>
+<span class="text-emerald-400"># Desenvolvedor Full Stack Java (Spring Boot + React)</span>
 <span class="text-slate-400">developer</span> = {
   <span class="text-sky-300">"name"</span>: <span class="text-amber-300">"Mauricio Goulart de Oliveira"</span>,
   <span class="text-sky-300">"github"</span>: <span class="text-indigo-300">"Mauricio-G-Oliveira"</span>,
   <span class="text-sky-300">"location"</span>: <span class="text-amber-300">"Tubarão, SC - Brasil"</span>,
-  <span class="text-sky-300">"status"</span>: <span class="text-emerald-300">"Disponível para novos desafios / Tech Lead / Sênior"</span>,
+  <span class="text-sky-300">"status"</span>: <span class="text-emerald-300">"Aberto a vagas de Desenvolvedor Java (pleno) — remoto"</span>,
   <span class="text-sky-300">"specialties"</span>: [
-    <span class="text-amber-300">"Java 21 & Spring Boot 3 (Security, JPA, REST)"</span>,
-    <span class="text-amber-300">"PostgreSQL & Modelagem Relacional de Alta Concorrência"</span>,
-    <span class="text-amber-300">"Front-End Moderno com React & TypeScript"</span>,
-    <span class="text-amber-300">"Docker & Conteinerização de Aplicações"</span>,
-    <span class="text-amber-300">"Automações Contábeis & Sistemas Corporativos"</span>
+    <span class="text-amber-300">"Java 21 & Spring Boot 3 (Security, Data JPA, REST)"</span>,
+    <span class="text-amber-300">"PostgreSQL, Flyway & Modelagem Relacional"</span>,
+    <span class="text-amber-300">"React, TypeScript & Tailwind CSS"</span>,
+    <span class="text-amber-300">"Docker & Conteinerização"</span>,
+    <span class="text-amber-300">"Domínio Contábil & Fiscal (NFC-e e Reforma Tributária IBS/CBS)"</span>
   ],
-  <span class="text-sky-300">"core_principles"</span>: [<span class="text-cyan-300">"SOLID"</span>, <span class="text-cyan-300">"Clean Architecture"</span>, <span class="text-cyan-300">"Fail-Fast"</span>, <span class="text-cyan-300">"Observability"</span>]
+  <span class="text-sky-300">"core_principles"</span>: [<span class="text-cyan-300">"SOLID"</span>, <span class="text-cyan-300">"Arquitetura em Camadas"</span>, <span class="text-cyan-300">"Idempotência"</span>, <span class="text-cyan-300">"Testabilidade"</span>]
 };
     `.trim(),
 
     metrics: `
-<span class="text-emerald-400"># Indicadores de Performance & Impacto</span>
-<span class="text-purple-400">❯</span> Executando auditoria de impacto em produção...
-  <span class="text-sky-400">● Conciliação Contábil:</span> Tempo reduzido de 4h diárias para ~3 minutos.
-  <span class="text-sky-400">● Precisão & Governança:</span> 0 inconsistências contábeis em lotes auditados.
-  <span class="text-sky-400">● StageFlow API:</span> Latência p95 &lt; 90ms em endpoints Spring Boot 3 + PostgreSQL.
-  <span class="text-sky-400">● CI/CD & Deploy:</span> Esteiras conteinerizadas com Docker & zero-downtime.
+<span class="text-emerald-400"># Arquitetura & Decisões Técnicas</span>
+<span class="text-purple-400">❯</span> Fatos verificáveis implementados nos projetos:
+  <span class="text-sky-400">● Cofre de Certificados:</span> Criptografia AES-256-GCM para certificados A1 contábeis.
+  <span class="text-sky-400">● Reforma Tributária:</span> Conferência item a item integrada à calculadora pública da RTC.
+  <span class="text-sky-400">● Partidas Dobradas:</span> Invariante estrito (Débitos = Créditos) com ordenação contra deadlocks.
+  <span class="text-sky-400">● Idempotência:</span> Interceptor com chave UUIDv7 para segurança contra requisições duplicadas.
+  <span class="text-sky-400">● Banco Versionado:</span> Migrations reproduzíveis com Flyway no PostgreSQL.
     `.trim(),
 
     contact: `
@@ -389,7 +377,7 @@ function setupTerminal() {
 <span class="text-slate-400">linkedin</span> = <span class="text-indigo-400">"https://linkedin.com/in/mauriciogoulartdev"</span>;
 <span class="text-slate-400">github</span> = <span class="text-purple-400">"https://github.com/Mauricio-G-Oliveira"</span>;
 
-<span class="text-emerald-400">Pronto para acelerar a entrega e robustez técnica do seu time.</span>
+<span class="text-emerald-400">Aberto a vagas de Desenvolvedor Java (pleno) — remoto.</span>
     `.trim()
   };
 
